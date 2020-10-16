@@ -2,8 +2,6 @@ import { Item } from './items.model';
 export interface Order {
     customerName: string;
     address: string;
-    quantity: number;
-    amount: number;
     status: Status;
     items: Item[];
 }

@@ -1,0 +1,11 @@
+mat-list-item:hover {
+    font-weight: bold;
+    background-color: #4dd0e1;
+    cursor: pointer;
+}
+
+mat-list-item.disabled {
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    text-decoration: none;
+}

@@ -1,1 +1,12 @@
-<p>order-book works!</p>
+<h1> Order Book</h1>
+<mat-list>
+    <mat-list-item *ngFor="let order of orderList">
+        <h3 matLine>Customer : {{order.customerName}} </h3>
+        <h6 matLine>Total Items: {{order.items.length}} </h6>
+        <h6 matLine>Total Amount: {{totalAmount(order.items)}} </h6>
+        <h6 matLine> {{order.status}} </h6>
+        <mat-action-list>
+            <button mat-list-item (click)="updateStatus(order)" [ngClass]="{'disabled':isDisabled(order)}"> Change Status </button>
+        </mat-action-list>
+    </mat-list-item>
+</mat-list>
